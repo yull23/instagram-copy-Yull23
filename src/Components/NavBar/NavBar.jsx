@@ -1,20 +1,14 @@
-import OptionNav from "./components/OptionNav";
-import { GoHomeFill } from "react-icons/go";
-import { BiMoviePlay, BiSearch } from "react-icons/bi";
-import { ImCompass2 } from "react-icons/im";
-import { FaFacebookMessenger } from "react-icons/fa";
-import { FiHeart } from "react-icons/fi";
 import * as myIcons from "../../assets/imgs/Icons";
+import OptionNav from "./components/OptionNav";
 
 export default function NavBar() {
   return (
     <div>
       <div>
-        {/* <myIcons.SearchIcon alt="img" active={true} />
-        <myIcons.ExploreIcon alt="img" active={false} />
-        <myIcons.ReelIcon alt="img" active={false} /> */}
-        <myIcons.HomeIcon width={24} height={24} active={true} />
-        <myIcons.HomeIcon width={24} height={24} active={false} />
+        <myIcons.HomeIcon width={48} height={48} active={true} />
+        <myIcons.HomeIcon width={48} height={48} active={false} />
+        <myIcons.SearchIcon width={24} height={24} active={true} />
+        <myIcons.SearchIcon width={24} height={24} active={false} />
 
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae
@@ -28,6 +22,9 @@ export default function NavBar() {
           eligendi, molestias quo impedit assumenda omnis maxime? Quisquam autem
           sit veritatis!
         </p>
+      </div>
+      <div>
+        <OptionNav />
       </div>
     </div>
   );
