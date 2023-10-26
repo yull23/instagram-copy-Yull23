@@ -13,6 +13,9 @@ export const reset = css`
     line-height: 1.5;
     // border: 1px solid black;
   }
+  html {
+    // font-size: 10px;
+  }
 
   body {
     overflow-y: scroll;
