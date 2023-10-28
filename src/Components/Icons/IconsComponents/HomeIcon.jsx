@@ -27,7 +27,6 @@ export function HomeIcon({ active, ...props }) {
           height={24}
           viewBox="0 0 24 24"
           fill="#f4f4f5"
-          stroke="#f4f4f5"
           aria-label="Home"
           className="x1lliihq x1n2onr6 x5n08af"
           {...props}

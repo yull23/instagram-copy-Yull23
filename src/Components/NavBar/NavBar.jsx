@@ -1,31 +1,55 @@
-import * as myIcons from "../../assets/imgs/Icons";
+import styled from "@emotion/styled";
+import * as myIcons from "../Icons/MyIcons";
+import { LogoIcon } from "../Icons/MyIcons";
+import { ContainerFlex, ContainerGrid } from "../Containers/Containers";
 import OptionNav from "./components/OptionNav";
 
 export default function NavBar() {
-  return (
-    <div>
-      <div>
-        <myIcons.HomeIcon width={48} height={48} active={true} />
-        <myIcons.HomeIcon width={48} height={48} active={false} />
-        <myIcons.SearchIcon width={24} height={24} active={true} />
-        <myIcons.SearchIcon width={24} height={24} active={false} />
+  const opsNavBar = {
+    home: {
+      name: "home",
+      icon: <myIcons.HomeIcon />,
+    },
+    search: {
+      name: "search",
+      icon: <myIcons.SearchIcon />,
+    },
+    explore: {
+      name: "explore",
+      icon: <myIcons.ExploreIcon />,
+    },
+    reels: {
+      name: "reels",
+      icon: <myIcons.MessengerIcon />,
+    },
+    notification: {
+      name: "notification",
+      icon: <myIcons.NotificationIcon />,
+    },
+    create: {
+      name: "create",
+      icon: <myIcons.NewPostIcon />,
+    },
+  };
 
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae
-          corporis reiciendis sint necessitatibus tempore alias quia aspernatur
-          aut amet, aliquam ipsam molestiae reprehenderit culpa pariatur laborum
-          ducimus minus eius labore!
-        </p>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo autem
-          eos explicabo nobis aliquid at dolorem, numquam, obcaecati doloribus
-          eligendi, molestias quo impedit assumenda omnis maxime? Quisquam autem
-          sit veritatis!
-        </p>
-      </div>
-      <div>
-        <OptionNav />
-      </div>
-    </div>
+  console.log(Object.keys(opsNavBar));
+
+  return (
+    <ContainerGrid
+      templateRow="auto 1fr auto"
+      moreStyle="min-height: 100vh;padding: 1rem 0.5rem; "
+    >
+      <ContainerFlex pd="2rem 0.5rem">
+        <LogoIcon />
+      </ContainerFlex>
+      <ContainerFlex direction="column" gap="0.5rem">
+        {Object.keys(opsNavBar).map((op, id) => (
+          <OptionNav key={id} label={opsNavBar[op].name}>
+            {opsNavBar[op].icon}
+          </OptionNav>
+        ))}
+      </ContainerFlex>
+      <div></div>
+    </ContainerGrid>
   );
 }

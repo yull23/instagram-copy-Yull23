@@ -9,3 +9,13 @@ export const ContainerFlex = styled.div`
   padding: ${({ pd }) => pd || "0"};
   ${({ moreStyle }) => moreStyle}
 `;
+
+export const ContainerGrid = styled.div`
+  display: grid;
+  grid-template-columns: ${({ templateColumn }) => templateColumn || ""};
+  grid-template-rows: ${({ templateRow }) => templateRow || ""};
+  gap: ${({ gap }) => gap || "0"};
+  row-gap: ${({ rowGap }) => rowGap || "0"};
+  column-gap: ${({ columnGap }) => columnGap || "0"};
+  ${({ moreStyle }) => moreStyle}
+`;
