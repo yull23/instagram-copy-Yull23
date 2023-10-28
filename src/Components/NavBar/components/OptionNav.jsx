@@ -12,10 +12,14 @@ export default function OptionNav({ label, children }) {
     transition: 0.2s;
     cursor: pointer;
 
+    img {
+      width: 1.5rem;
+      border-radius: 10rem;
+    }
+
     P {
       color: #f4f4f5;
       font-size: 1rem;
-      font-weight: bold;
       text-transform: capitalize;
     }
     &:hover {

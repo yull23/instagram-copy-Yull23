@@ -1,45 +1,23 @@
-import styled from "@emotion/styled";
+import { AiOutlineGithub } from "react-icons/ai";
 import * as myIcons from "../Icons/MyIcons";
 import { LogoIcon } from "../Icons/MyIcons";
 import { ContainerFlex, ContainerGrid } from "../Containers/Containers";
 import OptionNav from "./components/OptionNav";
+import { opsNavBar } from "../../Data/data-navbar";
+import { linkUser } from "../../Data/data-user-follow";
 
 export default function NavBar() {
-  const opsNavBar = {
-    home: {
-      name: "home",
-      icon: <myIcons.HomeIcon />,
-    },
-    search: {
-      name: "search",
-      icon: <myIcons.SearchIcon />,
-    },
-    explore: {
-      name: "explore",
-      icon: <myIcons.ExploreIcon />,
-    },
-    reels: {
-      name: "reels",
-      icon: <myIcons.MessengerIcon />,
-    },
-    notification: {
-      name: "notification",
-      icon: <myIcons.NotificationIcon />,
-    },
-    create: {
-      name: "create",
-      icon: <myIcons.NewPostIcon />,
-    },
-  };
+  const moreStyles = `
+    min-height: 100vh;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid #343435;
+    max-width: 17.25rem;
 
-  console.log(Object.keys(opsNavBar));
+  `;
 
   return (
-    <ContainerGrid
-      templateRow="auto 1fr auto"
-      moreStyle="min-height: 100vh;padding: 1rem 0.5rem; "
-    >
-      <ContainerFlex pd="2rem 0.5rem">
+    <ContainerGrid templateRow="auto 1fr auto" moreStyle={moreStyles}>
+      <ContainerFlex pd="1.5rem 0.5rem 2.10rem 0.5rem">
         <LogoIcon />
       </ContainerFlex>
       <ContainerFlex direction="column" gap="0.5rem">
@@ -48,8 +26,21 @@ export default function NavBar() {
             {opsNavBar[op].icon}
           </OptionNav>
         ))}
+        <OptionNav label="profile">
+          <img src={linkUser} alt="profile" />
+        </OptionNav>
+        <OptionNav label="gitHub">
+          <AiOutlineGithub color="#fff" size="1.5rem" />
+        </OptionNav>
       </ContainerFlex>
-      <div></div>
+      <ContainerFlex direction="column" gap="0.5rem">
+        <OptionNav label={"threads"}>
+          <myIcons.TheardsIcon />
+        </OptionNav>
+        <OptionNav label={"more"}>
+          <myIcons.MoreIcon />
+        </OptionNav>
+      </ContainerFlex>
     </ContainerGrid>
   );
 }

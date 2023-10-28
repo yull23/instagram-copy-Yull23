@@ -6,6 +6,8 @@ import { ReelsIcon } from "./IconsComponents/ReelsIcon";
 import { MessengerIcon } from "./IconsComponents/MessengerIcon";
 import { NotificationIcon } from "./IconsComponents/NotificationIcon";
 import { NewPostIcon } from "./IconsComponents/NewPostIcon";
+import { TheardsIcon } from "./IconsComponents/TheardsIcon";
+import { MoreIcon } from "./IconsComponents/MoreIcon";
 
 export {
   HomeIcon,
@@ -16,4 +18,6 @@ export {
   MessengerIcon,
   NotificationIcon,
   NewPostIcon,
+  TheardsIcon,
+  MoreIcon,
 };

@@ -24,4 +24,20 @@ div {
   min-height: 100%;
   padding: 0.5rem 1rem;
   text-transform: capitalize;
+  border-right: 1px solid gray;
+  border-left: 1px solid red;
+  max-width: 16.25rem;
+  font-weight: bold;
+}
+div {
+  width: 1.5rem;
+  border-radius: 10rem;
+}
+div {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  max-width: 64rem;
 }
