@@ -7,6 +7,8 @@ export const ContainerFlex = styled.div`
   justify-content: ${({ justify }) => justify || "start"};
   align-items: ${({ align }) => align || "start"};
   padding: ${({ pd }) => pd || "0"};
+  max-width: ${({ maxWidth }) => maxWidth};
+  width: ${({ dimWidth }) => dimWidth};
   ${({ moreStyle }) => moreStyle}
 `;
 

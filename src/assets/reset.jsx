@@ -11,7 +11,7 @@ export const reset = css`
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    // border: 1px solid gray;
+    border: 1px solid gray;
   }
   html {
     // font-size: 10px;

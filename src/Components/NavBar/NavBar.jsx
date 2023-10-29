@@ -4,7 +4,7 @@ import { LogoIcon } from "../Icons/MyIcons";
 import { ContainerFlex, ContainerGrid } from "../Containers/Containers";
 import OptionNav from "./components/OptionNav";
 import { opsNavBar } from "../../Data/data-navbar";
-import { linkUser } from "../../Data/data-user-follow";
+import { linkPhotoUser } from "../../Data/data-user-follow";
 
 export default function NavBar() {
   const moreStyles = `
@@ -12,7 +12,6 @@ export default function NavBar() {
     padding: 1rem 0.5rem;
     border-right: 1px solid #343435;
     max-width: 17.25rem;
-
   `;
 
   return (
@@ -27,7 +26,7 @@ export default function NavBar() {
           </OptionNav>
         ))}
         <OptionNav label="profile">
-          <img src={linkUser} alt="profile" />
+          <img src={linkPhotoUser} alt="profile" />
         </OptionNav>
         <OptionNav label="gitHub">
           <AiOutlineGithub color="#fff" size="1.5rem" />
