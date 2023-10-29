@@ -8,6 +8,11 @@ import { NotificationIcon } from "./IconsComponents/NotificationIcon";
 import { NewPostIcon } from "./IconsComponents/NewPostIcon";
 import { TheardsIcon } from "./IconsComponents/TheardsIcon";
 import { MoreIcon } from "./IconsComponents/MoreIcon";
+import { MoreOptionIcon } from "./IconsComponents/MoreOptionIcon";
+import { LikePost } from "./IconsComponents/LikePost";
+import { ComentIcon } from "./IconsComponents/ComentIcon";
+import { SendIcon } from "./IconsComponents/SendIcon";
+import { CollectionsIcon } from "./IconsComponents/CollectionsIcon";
 
 export {
   HomeIcon,
@@ -19,5 +24,10 @@ export {
   NotificationIcon,
   NewPostIcon,
   TheardsIcon,
+  LikePost,
   MoreIcon,
+  ComentIcon,
+  MoreOptionIcon,
+  CollectionsIcon,
+  SendIcon,
 };

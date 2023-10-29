@@ -60,9 +60,9 @@ export default function Aside() {
       <ContainerFlex direction="column" gap="1rem" moreStyle="padding: 1rem 0;">
         <ContainerFlex direction="column">
           <p className="text-footer">
-            About - Help - Press - API - Jobs - Privacy - Terms
+            About • Help • Press • API • Jobs • Privacy • Terms
           </p>
-          <p className="text-footer">Locations - Language - Meta - Verified</p>
+          <p className="text-footer">Locations • Language • Meta • Verified</p>
         </ContainerFlex>
         <p className="text-footer">© 2023 INSTAGRAM FROM YULL23</p>
       </ContainerFlex>

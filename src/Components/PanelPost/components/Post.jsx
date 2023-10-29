@@ -2,8 +2,9 @@ import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import HeaderPost from "./HeaderPost";
 import FooterPost from "./FooterPost";
+import ActionsPost from "./ActionsPost";
 
-export default function Post({ photoPost }) {
+export default function Post({ photoPost, username, linkPhoto }) {
   const Container = styled.div`
     max-width: 30rem;
   `;
@@ -20,17 +21,18 @@ export default function Post({ photoPost }) {
 
   return (
     <Container>
-      <HeaderPost />
+      <HeaderPost username={username} linkPhoto={linkPhoto} />
       <ContainerImg>
         <img src={photoPost} alt="post-img" />
       </ContainerImg>
+      <ActionsPost />
       <FooterPost />
     </Container>
   );
 }
 
 Post.propTypes = {
+  photoPost: PropTypes.string,
   username: PropTypes.string,
   linkPhoto: PropTypes.string,
-  status: PropTypes.string,
 };
