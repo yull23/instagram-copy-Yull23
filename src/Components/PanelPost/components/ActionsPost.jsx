@@ -10,15 +10,21 @@ import { ContainerFlex } from "../../Containers/Containers";
 
 export default function ActionsPost() {
   const [likeActive, setLikeActive] = useState(false);
+  const [saveStatus, setSaveStatus] = useState(false);
 
-  const handleClick = () => {
+  const handleClickLike = () => {
     setLikeActive(!likeActive);
+  };
+
+  const handleClickSave = () => {
+    setSaveStatus(!saveStatus);
   };
 
   const Container = styled.div`
     svg {
     }
     svg:hover {
+      stroke: #757272;
       cursor: pointer;
     }
     svg:active {
@@ -30,14 +36,18 @@ export default function ActionsPost() {
       <ContainerFlex justify="space-between" pd="0.75rem 0">
         <ContainerFlex gap="1rem">
           {likeActive ? (
-            <LikePost active={true} onClick={handleClick} />
+            <LikePost active={true} onClick={handleClickLike} />
           ) : (
-            <LikePost active={false} onClick={handleClick} />
+            <LikePost active={false} onClick={handleClickLike} />
           )}
-          <ComentIcon fill="none" stroke="#fff" />
+          <ComentIcon />
           <SendIcon />
         </ContainerFlex>
-        <CollectionsIcon />
+        {saveStatus ? (
+          <CollectionsIcon active={true} onClick={handleClickSave} />
+        ) : (
+          <CollectionsIcon active={false} onClick={handleClickSave} />
+        )}
       </ContainerFlex>
     </Container>
   );

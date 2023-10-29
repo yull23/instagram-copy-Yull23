@@ -4,7 +4,7 @@ import Post from "./components/Post";
 
 export default function PanelPost() {
   const userTest = linksImgs[0];
-  const user = usersFollow["user7"];
+  const user = usersFollow["user1"];
   console.log(user);
   return (
     <div>
