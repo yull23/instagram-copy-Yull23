@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import PropTypes from "prop-types";
+
 import { ContainerFlex } from "../../Containers/Containers";
 
 export default function CardFollow({ username, linkPhoto, status }) {
@@ -54,3 +56,9 @@ export default function CardFollow({ username, linkPhoto, status }) {
     </Container>
   );
 }
+
+CardFollow.propTypes = {
+  username: PropTypes.string,
+  linkPhoto: PropTypes.string,
+  status: PropTypes.string,
+};
