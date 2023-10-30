@@ -12,7 +12,7 @@ export default function OptionNav({
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 2px 0;
+    margin: 4px 0;
     padding: 0.8rem 0.75rem 0.7rem 0.75rem;
     gap: 1rem;
     border-radius: 0.5rem;

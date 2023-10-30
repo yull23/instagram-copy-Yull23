@@ -13,6 +13,7 @@ export default function Post({ photoPost, username, linkPhoto }) {
 
   const ContainerImg = styled.div`
     width: 30rem;
+    height: 35rem;
     display: flex;
     align-items: center;
     border: 1px solid #343435;
@@ -20,6 +21,8 @@ export default function Post({ photoPost, username, linkPhoto }) {
     border-radius: 0.25rem;
     img {
       width: 100%;
+      max-height: 35rem;
+
       object-fit: cover;
     }
   `;

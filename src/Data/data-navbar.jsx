@@ -21,7 +21,7 @@ export const opsNavBar = {
     icon: <myIcons.MessengerIcon />,
   },
   notification: {
-    name: "notification",
+    name: "notifications",
     icon: <myIcons.NotificationIcon />,
   },
   create: {

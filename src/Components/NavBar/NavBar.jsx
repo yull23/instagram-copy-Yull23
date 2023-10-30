@@ -16,6 +16,10 @@ export default function NavBar() {
     width: 24.5rem;
     padding: 0.5rem 0.75rem 1.25rem;
     border-right: 1px solid #343435;
+    a{
+    width: 100%;
+
+    }
   `;
   const [statusActive, setStatusActive] = useState(0);
 
@@ -39,12 +43,19 @@ export default function NavBar() {
             {opsNavBar[op].icon}
           </OptionNav>
         ))}
-        <OptionNav label="profile">
-          <img src={linkPhotoUser} alt="profile" />
-        </OptionNav>
-        <OptionNav label="gitHub">
-          <AiOutlineGithub color="#fff" size="1.5rem" />
-        </OptionNav>
+        <a href="https://www.instagram.com/tzzair/" target="blank">
+          <OptionNav label="profile">
+            <img src={linkPhotoUser} alt="profile" />
+          </OptionNav>
+        </a>
+        <a
+          href="https://github.com/yull23/instagram-styles-yull23"
+          target="blank"
+        >
+          <OptionNav label="gitHub">
+            <AiOutlineGithub color="#fff" size="1.5rem" />
+          </OptionNav>
+        </a>
       </ContainerFlex>
       <ContainerFlex direction="column" gap="0.5rem">
         <OptionNav label={"threads"}>
