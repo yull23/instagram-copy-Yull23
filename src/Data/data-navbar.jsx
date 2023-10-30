@@ -2,7 +2,7 @@ import * as myIcons from "../Components/Icons/MyIcons";
 export const opsNavBar = {
   home: {
     name: "home",
-    icon: <myIcons.HomeIcon />,
+    icon: <myIcons.HomeIcon active={false} />,
   },
   search: {
     name: "search",

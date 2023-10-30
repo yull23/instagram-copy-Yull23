@@ -7,16 +7,21 @@ import ActionsPost from "./ActionsPost";
 export default function Post({ photoPost, username, linkPhoto }) {
   const Container = styled.div`
     max-width: 30rem;
+    border-bottom: 1px solid #343435;
+    padding: 1rem 0;
   `;
 
   const ContainerImg = styled.div`
     width: 30rem;
-    height: 30rem;
     display: flex;
     align-items: center;
     border: 1px solid #343435;
     justify-content: center;
     border-radius: 0.25rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   `;
 
   return (
@@ -26,7 +31,7 @@ export default function Post({ photoPost, username, linkPhoto }) {
         <img src={photoPost} alt="post-img" />
       </ContainerImg>
       <ActionsPost />
-      <FooterPost />
+      <FooterPost username={username} />
     </Container>
   );
 }

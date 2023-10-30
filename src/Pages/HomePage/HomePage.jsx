@@ -22,7 +22,7 @@ export default function HomePage() {
       <NavBar />
       <ContainerFlex
         justify="center"
-        moreStyle="width: 100%;padding-top: 4rem;"
+        moreStyle="width: 100%;padding-top: 4rem;padding-left: 336px;"
       >
         <Outlet />
       </ContainerFlex>

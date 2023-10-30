@@ -5,23 +5,37 @@ import { ContainerFlex, ContainerGrid } from "../Containers/Containers";
 import OptionNav from "./components/OptionNav";
 import { opsNavBar } from "../../Data/data-navbar";
 import { linkPhotoUser } from "../../Data/data-user-follow";
+import { useState } from "react";
 
 export default function NavBar() {
   const moreStyles = `
-    min-height: 100vh;
-    padding: 1rem 0.5rem;
-    border-right: 1px solid #343435;
-    max-width: 17.25rem;
-  `;
+    position: fixed;
+    
 
+    min-height: 100vh;
+    width: 24.5rem;
+    padding: 0.5rem 0.75rem 1.25rem;
+    border-right: 1px solid #343435;
+  `;
+  const [statusActive, setStatusActive] = useState(0);
+
+  const handleClick = (id) => {
+    setStatusActive(id);
+  };
   return (
     <ContainerGrid templateRow="auto 1fr auto" moreStyle={moreStyles}>
-      <ContainerFlex pd="1.5rem 0.5rem 2.10rem 0.5rem">
+      <ContainerFlex pd="2rem 0.75rem 0.75rem " moreStyle="margin: 0 0 19px;">
         <LogoIcon />
       </ContainerFlex>
-      <ContainerFlex direction="column" gap="0.5rem">
+      <ContainerFlex direction="column" gap="0rem">
         {Object.keys(opsNavBar).map((op, id) => (
-          <OptionNav key={id} label={opsNavBar[op].name}>
+          <OptionNav
+            key={id}
+            label={opsNavBar[op].name}
+            statusActive={statusActive}
+            handleClick={handleClick}
+            index={id}
+          >
             {opsNavBar[op].icon}
           </OptionNav>
         ))}
