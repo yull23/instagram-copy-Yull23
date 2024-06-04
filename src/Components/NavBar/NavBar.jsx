@@ -31,6 +31,7 @@ export default function NavBar() {
       <ContainerFlex pd="2rem 0.75rem 0.75rem " moreStyle="margin: 0 0 19px;">
         <LogoIcon />
       </ContainerFlex>
+      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatem ipsam perspiciatis aliquam doloremque autem quisquam ullam facilis delectus. Ea quibusdam vero perspiciatis impedit nulla sed nesciunt dolorum molestiae. Earum?</h1>
       <ContainerFlex direction="column" gap="0rem">
         {Object.keys(opsNavBar).map((op, id) => (
           <OptionNav

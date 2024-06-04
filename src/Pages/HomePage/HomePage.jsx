@@ -26,6 +26,7 @@ export default function HomePage() {
       >
         <Outlet />
       </ContainerFlex>
+      
     </Container>
   );
 }
